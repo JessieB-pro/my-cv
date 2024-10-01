@@ -5,6 +5,7 @@ import technosG1 from '../assets/technosG1.png';
 import technosG2 from '../assets/technosG2.png';
 import technosG3 from '../assets/technosG3.png';
 import technosG4 from '../assets/technosG4.png';
+import technosG4bis from '../assets/technosG4bis.png';
 import technosG5 from '../assets/technosG5.png';
 import technosG6 from '../assets/technosG6.png';
 import technosG7 from '../assets/technosG7.png';
@@ -74,9 +75,15 @@ export default function Competences() {
                   </li>
 
                   <li>
+                  <img src={technosG4bis} alt="sheet excel" />
+                    Dans les nuages : 
+                    <span><b> Cloudflare, </b>Firebase</span>
+                  </li>
+
+                  <li>
                   <img src={technosG5} alt="sheet excel" />
                     Mieux qu'Excel : 
-                    <span><b> Firebase, </b>MySQL</span>
+                    <span><b> MySQL</b></span>
                   </li>
 
                   <li>
