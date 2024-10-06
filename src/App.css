@@ -168,11 +168,12 @@ img {
 }
 
 #skills .myBar {
+    width: 50vw;
     margin: 25px auto;
 }
 
 #skills .myBarMotiv {
-    width: 100vw;
+    width: 50vw;
     margin: 25px auto;
     margin-bottom: 40px;
 }
@@ -429,6 +430,10 @@ p {
 .experience h5 {
     color: #585555;
     font-size: 17px;
+}
+
+.experience .badge-container {
+    gap: 10px;
 }
 
 

@@ -32,8 +32,8 @@ export default function Competences() {
           <h1>Compétences</h1>
         </div>
         <div className="container">
-          <div className="row justify-content-md-center">
-            <div className="col-md-auto">
+          <div className="row justify-content-center">
+            <div className="col-md-8 col-sm-12">
               <div className="headingPlus">
                 <h4>Techniques/Technos</h4>
               </div>
@@ -106,7 +106,8 @@ export default function Competences() {
                 </ul>
               </div>
 
-              <div className="col-md-auto mt-5">
+              <div className="row justify-content-center">
+              <div className="col-md-8 col-sm-12 mt-5">
                 <div className="headingPlus">
                   <h4>Transversales</h4>
                 </div>
@@ -139,8 +140,9 @@ export default function Competences() {
                   label='Anglais oral (B1)'
                 />
               </div>
-              <div className="row justify-content-md-center">
-                <div className="col-md-auto">
+              </div>
+              <div className="row justify-content-center">
+                <div className="col-md-8 col-sm-12 mt-5">
                   <div className="headingPlus">
                     <h4>Et aussi ...</h4>
                   </div>

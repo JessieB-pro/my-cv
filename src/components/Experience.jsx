@@ -28,7 +28,7 @@ export default function Experience() {
                 </Badge>
               </Stack>
             </div>
-            <div className="d-flex justify-content-center mt-3">
+            <div className="d-flex justify-content-center flex-wrap mt-3 badge-container">
               <MDBBadge className="text-black mb-0 me-1 border" color="light">
                 GESLAB
               </MDBBadge>
@@ -61,7 +61,7 @@ export default function Experience() {
                 </Badge>
               </Stack>
             </div>
-            <div className="d-flex justify-content-center mt-3">
+            <div className="d-flex justify-content-center flex-wrap mt-3 badge-container">
               <MDBBadge className="text-black mb-0 me-1 border" color="light">
                 APOGEE
               </MDBBadge>
@@ -91,7 +91,7 @@ export default function Experience() {
                 </Badge>
               </Stack>
             </div>
-            <div className="d-flex justify-content-center mt-3">
+            <div className="d-flex justify-content-center flex-wrap mt-3 badge-container">
               <MDBBadge className="text-black mb-0 me-1 border" color="light">
                 APOGEE
               </MDBBadge>
@@ -118,7 +118,7 @@ export default function Experience() {
                 </Badge>
               </Stack>
             </div>
-            <div className="d-flex justify-content-center mt-3">
+            <div className="d-flex justify-content-center flex-wrap mt-3 badge-container">
               <MDBBadge className="text-black mb-0 me-1 border" color="light">
                 PuTTY
               </MDBBadge>
