@@ -133,11 +133,12 @@ img {
 
 #skills .groupTechnos li {
     list-style-type: none;
-    margin: 10px;
+    margin: 10px auto;
 }
 
 #skills .groupTechnos ul {
     font-size: 12px;
+    padding: 0;
 }
 
 #skills .groupTechnos ul span {
