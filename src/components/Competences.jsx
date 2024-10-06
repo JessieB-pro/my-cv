@@ -14,7 +14,7 @@ import technosG8 from '../assets/technosG8.png';
 export default function Competences() {
 
   const progressFrontEnd = 70;
-  const progressBackEnd = 20;
+  const progressBackEnd = 30;
 
   const progressAdapt = 95;
   const progressTeam = 95;
