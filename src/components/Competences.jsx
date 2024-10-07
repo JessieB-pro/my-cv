@@ -114,7 +114,7 @@ export default function Competences() {
                 <ProgressBar
                   now={progressAdapt}
                   className="myBar"
-                  label='Adaptation'
+                  label='Adaptabilité'
                 />
                 <ProgressBar
                   now={progressTeam}
@@ -124,7 +124,7 @@ export default function Competences() {
                 <ProgressBar
                   now={progressOrgan}
                   className="myBar"
-                  label='Organisation'
+                  label='Être organisée'
                 />
                 <div className="headingPlus">
                   <h4>En Langues</h4>
