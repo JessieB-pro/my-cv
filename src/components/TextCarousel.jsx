@@ -33,7 +33,7 @@ function TextCarousel() {
                 ))
             ) : (
                 <div className="justify-content-center align-items-center">
-                    <h4>Oups, mes centres d'intérêt se sont échappés...</h4>
+                    <h4 mt-5>Oups, mes centres d'intérêt se sont échappés...</h4>
                 </div>
             )
             }
