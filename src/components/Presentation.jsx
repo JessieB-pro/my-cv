@@ -13,7 +13,8 @@ export default function Presentation() {
                 <h1 className='animate pulse'>Jessie Bagnéris</h1>
                 <h2>Après une première vie professionnelle bien remplie, c'est avec <span>passion</span> que je suis devenue :</h2>
                 <h3 className="animate flipInX">Développeuse Front-End</h3>
-                <h2>débutante, <span>prête</span> à coder et <span>motivée</span> parce que dans ce métier, on ne cesse jamais vraiment <span>d'apprendre</span> !</h2>
+                <h3 id="search" className="animate flipInX">recherchant une immersion professionnelle PMSMP</h3>
+                <h2>Débutante, <span>prête</span> à coder et <span>motivée</span> parce que dans ce métier, on ne cesse jamais vraiment <span>d'apprendre</span> !</h2>
                 <a href={cv_Jessie_BAGNERIS} className="button1" target="_blank">Télécharger mon CV</a>
             </div>
         </div> 

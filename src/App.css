@@ -91,6 +91,15 @@ img {
     animation-delay: 2.5s;
 }
 
+#presentation .heading #search {
+    margin-top: 15px;
+    color: rgb(154, 178, 241);
+    text-shadow: 1px 1px 1px rgb(38, 37, 37);
+    font-style: italic;
+    animation-duration: 2s;
+    animation-delay: 2.5s;
+}
+
 .button1 {
     font-weight: bold;
     text-transform: uppercase;

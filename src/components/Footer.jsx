@@ -30,7 +30,7 @@ export default function Footer() {
                     www.linkedin.com/in/jessie-bagneris-29b422330
                 </a>
             </div>
-            <h5>© 2024 CV Jessie BAGNERIS</h5>
+            <h5>© 2025 CV Jessie BAGNERIS</h5>
         </div>
     )
 }

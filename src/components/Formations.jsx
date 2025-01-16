@@ -100,7 +100,7 @@ export default function Formations() {
             <div className="timeline-4 right-4">
               <MDBCard className="gradient-custom-4">
                 <MDBCardBody className="p-4">
-                  <h4>S.E.P.T. (qualifiante)</h4>
+                  <h4>S.E.P.T. Blagnac (qualifiante)</h4>
                   <h4 className="text-decoration-underline">Assistante Tertiaire</h4>
                   <p className="medium text-white-50 mb-4">2008 (3 mois)</p>
                   <p>Perfectionnement dans les domaines de :</p>
