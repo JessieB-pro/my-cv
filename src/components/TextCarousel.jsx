@@ -6,35 +6,35 @@ import { db } from './FirebaseConfig';
 
 function TextCarousel() {
 
-    const [centresInteret, setCentresInteret] = useState();
+    const [hobbies, setHobbies] = useState();
 
-    const getCentresInteret = async () => {
-        const querySnapshot = await getDocs(collection(db, "centresInteret"));
+    const getHobbies = async () => {
+        const querySnapshot = await getDocs(collection(db, "hobbies"));
 
-        const centresInteret = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+        const hobbies = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
 
-        setCentresInteret(centresInteret)
+        setHobbies(hobbies)
     }
 
     useEffect(() => {
-        getCentresInteret()
+        getHobbies()
     }, []);
 
     return (
         <Carousel id="myCarousel">
-            {centresInteret ? (
-                centresInteret.map((centreInteret, i) => (
+            {hobbies ? (
+                hobbies.map((hobbies, i) => (
                     <Carousel.Item interval={8000}>
-                        <div id="carousel-item" className="justify-content-center align-items-center" key={centreInteret.id}>
-                            <h3 className='mb-5'>{centreInteret.title}</h3>
-                            <h4 className='mb-5'>{centreInteret.citation}</h4>
+                        <div id="carousel-item" className="justify-content-center align-items-center" key={hobbies.id}>
+                            <h3 className='mb-5'>{hobbies.title}</h3>
+                            <h4 className='mb-5'>{hobbies.quote}</h4>
                         </div>
                     </Carousel.Item>
                 ))
             ) : (
-                <Carousel.Item interval={8000}>
+                <Carousel.Item>
                 <div mt-3 className="justify-content-center align-items-center">
-                    <h4>Oups, mes centres d'intérêt se sont échappés...</h4>
+                    <h3 className='m-5'>Chargement en cours...</h3>
                 </div>
                 </Carousel.Item>
             )

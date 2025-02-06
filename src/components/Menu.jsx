@@ -33,14 +33,21 @@ export default function Menu() {
               <NavItem as="li">
                 <NavLink className="custom-navbar" to="/skills" onClick={() => setExpanded(false)}>Compétences</NavLink>
               </NavItem>
+
               <NavItem as="li">
-                <NavLink className="custom-navbar" to="/formations" onClick={() => setExpanded(false)}>Formations</NavLink>
+                <NavLink className="custom-navbar" to="/trainings" onClick={() => setExpanded(false)}>Formations</NavLink>
               </NavItem>
               <NavItem as="li">
-                <NavLink className="custom-navbar" to="/experience" onClick={() => setExpanded(false)}>Expérience</NavLink>
+                <NavLink className="custom-navbar" to="/assets" onClick={() => setExpanded(false)}>Atouts</NavLink>
               </NavItem>
               <NavItem as="li">
-                <NavLink className="custom-navbar" to="/centresInteret" onClick={() => setExpanded(false)}>Centres d'intérêt</NavLink>
+                <NavLink className="custom-navbar" to="/experiences" onClick={() => setExpanded(false)}>Expériences</NavLink>
+              </NavItem>
+              <NavItem as="li">
+                <NavLink className="custom-navbar" to="/languages" onClick={() => setExpanded(false)}>Langues</NavLink>
+              </NavItem>
+              <NavItem as="li">
+                <NavLink className="custom-navbar" to="/hobbies" onClick={() => setExpanded(false)}>Centres d'intérêt</NavLink>
               </NavItem>
             </Nav>
           </Navbar.Collapse>

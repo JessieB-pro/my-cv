@@ -1,9 +1,9 @@
 import { MDBBadge, MDBCard, MDBCardBody, MDBContainer } from "mdb-react-ui-kit";
 
-export default function Formations() {
+export default function Trainings() {
   return (
     <>
-      <div id="formations" className="container-fluid">
+      <div id="trainings" className="container-fluid">
         <div className="heading">
           <h1>Formations</h1>
         </div>

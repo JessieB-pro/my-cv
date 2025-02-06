@@ -1,5 +1,6 @@
-import at from '../assets/at.png';
+import email from '../assets/email.png';
 import linkedin from '../assets/linkedin.png';
+import phone from '../assets/phone.png';
 
 export default function Footer() {
     return (
@@ -8,13 +9,13 @@ export default function Footer() {
                 <span className="material-icons">expand_less</span>
             </a>
 
-            <div id="contacts" className="animate flash">
-                <p>
+            <div id="details" className="animate flash">
+                <p className='details'>
                     <u>Pour me contacter</u> :
                 </p>
 
-                <div className='contactEmail'>
-                    <img src={at} alt="icon email" />
+                <div className='detailsEmail'>
+                    <img src={email} alt="icon email" />
                     <p>
                         <span 
                         className='blockspam'
@@ -27,10 +28,17 @@ export default function Footer() {
 
                 <a href="https://www.linkedin.com/in/jessie-bagneris-29b422330/" target='_blank'>
                     <img src={linkedin} alt="icon linkedin" />
-                    www.linkedin.com/in/jessie-bagneris-29b422330
+                    jessie-bagneris-29b422330
                 </a>
+
+                <div className='detailsPhone'>
+                    <img src={phone} alt="icon phone" />
+                    <p>
+                        +33.6.51.85.93.46
+                    </p>
+                </div>
             </div>
-            <h5>© 2025 CV Jessie BAGNERIS</h5>
+            <h5>© 2025 CV Jessie BAGNERIS. Tous droits réservés.</h5>
         </div>
     )
 }

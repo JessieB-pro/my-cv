@@ -1,10 +1,12 @@
 import './App.css'
 import Menu from './components/Menu'
 import Presentation from './components/Presentation'
-import Competences from './components/Competences'
-import Formations from './components/Formations'
-import Experience from './components/Experience'
-import CentresInteret from './components/CentresInteret'
+import Skills from './components/Skills'
+import Assets from './components/Assets'
+import Languages from './components/Languages'
+import Trainings from './components/Trainings'
+import Experiences from './components/Experiences'
+import Hobbies from './components/Hobbies'
 import Footer from './components/Footer'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import ErrorPage from './components/ErrorPage'
@@ -20,10 +22,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Navigate to="/presentation" replace />} />
         <Route path='/presentation' element={<Presentation />} />
-        <Route path='/skills' element={<Competences />} />
-        <Route path='/formations' element={<Formations />} />
-        <Route path='/experience' element={<Experience />} />
-        <Route path='/centresInteret' element={<CentresInteret />} />
+        <Route path='/skills' element={<Skills />} />
+        <Route path='/trainings' element={<Trainings />} />
+        <Route path='/assets' element={<Assets />} />
+        <Route path='/experiences' element={<Experiences />} />
+        <Route path='/languages' element={<Languages />} />
+        <Route path='/hobbies' element={<Hobbies />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
 

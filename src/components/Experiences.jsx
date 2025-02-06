@@ -3,20 +3,20 @@ import Badge from 'react-bootstrap/Badge';
 import Stack from 'react-bootstrap/Stack';
 import { MDBBadge } from "mdb-react-ui-kit";
 
-export default function Experience() {
+export default function Experiences() {
   return (
     <>
-    <div id="experience" className="container-fluid">
+    <div id="experiences" className="container-fluid">
       <div className="heading">
-        <h1>Expérience</h1>
+        <h1>Expériences</h1>
       </div>
-      <Accordion className='experience'>
+      <Accordion className='experiences'>
         <Accordion.Item eventKey="0">
           <Accordion.Header>
             <h4>Depuis Octobre 2016</h4>
           </Accordion.Header>
           <Accordion.Body>
-            <h4 id="styleCompany" className="text-decoration-underline">Université Toulouse III Paul Sabatier</h4>
+            <h4 id="corporateStyle" className="text-decoration-underline">Université Toulouse III Paul Sabatier</h4>
             <h5>ADJAENES titulaire</h5>
             <div className="d-flex justify-content-center">
               <Stack direction="horizontal" gap={3}>
@@ -52,7 +52,7 @@ export default function Experience() {
             <h4>2010-2016</h4>
           </Accordion.Header>
           <Accordion.Body>
-            <h4 id="styleCompany" className="text-decoration-underline">IUT Paul Sabatier</h4>
+            <h4 id="corporateStyle" className="text-decoration-underline">IUT Paul Sabatier</h4>
             <h5>ADJAENES titulaire</h5>
             <div className="d-flex justify-content-center">
               <Stack direction="horizontal" gap={3}>
@@ -82,7 +82,7 @@ export default function Experience() {
             <h4>2010 (8mois)</h4>
           </Accordion.Header>
           <Accordion.Body>
-            <h4 id="styleCompany" className="text-decoration-underline">Université Toulouse III Paul Sabatier</h4>
+            <h4 id="corporateStyle" className="text-decoration-underline">Université Toulouse III Paul Sabatier</h4>
             <h5>Agent administratif contractuel</h5>
             <div className="d-flex justify-content-center">
               <Stack direction="horizontal" gap={3}>
@@ -109,7 +109,7 @@ export default function Experience() {
             <h4>Avant 2010</h4>
           </Accordion.Header>
           <Accordion.Body>
-            <h4 id="styleCompany">Divers CDD au <u>Rectorat de Toulouse</u> - <u>...</u></h4>
+            <h4 id="corporateStyle">Divers CDD au <u>Rectorat de Toulouse</u> - <u>...</u></h4>
             <h5>Agent administratif contractuel - ...</h5>
             <div className="d-flex justify-content-center">
               <Stack direction="horizontal" gap={3}>
