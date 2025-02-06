@@ -57,9 +57,9 @@ img {
 
 #pop-up {
     border-radius: 50% !important;
-    padding: 4% 20%;
+    padding: 4% 22%;
     max-width: 90%;
-    max-height: 60%;
+    max-height: 70%;
     z-index: 1100;
 }
 
@@ -68,6 +68,13 @@ img {
     margin-left: 10px;
     margin-right: 10px;
     font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+
+#pop-up small {
+    color: rgb(93, 88, 88);
+    margin-left: 11px;
+    margin-right: 11px;
+    font-size: clamp(0.6rem, 2.3vw, 0.8rem);
 }
 
 #pop-up p span {
