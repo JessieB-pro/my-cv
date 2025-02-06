@@ -55,7 +55,7 @@ export default function PopUp() {
             <p>J'ai ensuite <span>déployé</span> mon site sous mon <span>nom de domaine</span> via un <span>repo GitHub</span> et la plateforme <span>Cloudflare</span>.
             </p>
             <p>Le tout avec une pincée d'humour et mes compétences en constante évolution !</p>
-            <small><u>Cliquez en dehors de la bulle pour naviguer sur mon cv ou scrollez vers le bas !</u></small>
+            <small><u>Pour naviguer sur mon cv, cliquez en dehors de la bulle ou scrollez vers le bas !</u></small>
           </div>
         </div>
       )}
