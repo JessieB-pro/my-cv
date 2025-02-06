@@ -51,7 +51,8 @@ export default function PopUp() {
           >
             <p><u>Bienvenue dans ma bulle</u> !</p>
             <p>Ceci n'est pas qu'une page très bleue mais mon cv que j'ai <span>codé avec React</span> en intégrant aussi une partie de mes <span>données stockées sur Cloud Firestore</span>,... 
-              J'ai ensuite <span>déployé</span> mon site sous mon <span>nom de domaine</span> via un <span>repo GitHub</span> et la plateforme <span>Cloudflare</span>.
+            </p>
+            <p>J'ai ensuite <span>déployé</span> mon site sous mon <span>nom de domaine</span> via un <span>repo GitHub</span> et la plateforme <span>Cloudflare</span>.
             </p>
             <p>Le tout avec une pincée d'humour et mes compétences en constante évolution !</p>
             <p><u>Cliquez en dehors de la bulle pour naviguer sur mon cv ou scrollez vers le bas !</u></p>
