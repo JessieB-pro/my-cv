@@ -63,21 +63,50 @@ img {
     z-index: 1100;
 }
 
+#pop-up .bubble-title {
+    color: rgb(9, 9, 9);
+    margin: 6px 10px;
+    padding-bottom: 1.1rem;
+    font-size: clamp(1.1rem, 2.5vw, 1,3rem);
+    text-transform: uppercase;
+}
+
 #pop-up p {
     color: rgb(9, 9, 9);
     margin: 6px 10px;
     font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
-#pop-up small {
-    color: rgb(93, 88, 88);
-    margin: 6px 10px;
-    font-size: clamp(0.6rem, 2.3vw, 0.8rem);
+#pop-up .blue-word {
+    text-shadow: 0px 1px 1px rgb(189, 183, 183);
+    color: rgb(61, 179, 252);
+    margin: 0 6px;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    text-transform: uppercase;
 }
 
 #pop-up p span {
     text-shadow: 0px 1px 1px rgb(189, 183, 183);
-    color: rgb(252, 83, 61);
+    color: rgb(235, 108, 79);
+    margin: 0 6px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    text-transform: uppercase;
+}
+
+#pop-up .small-text {
+    font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+}
+
+#pop-up .additional-text {
+    color: rgb(103, 103, 103);
+    font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+}
+
+#pop-up .get-out-bubble {
+    color: rgb(93, 88, 88);
+    margin: 6px 20px 14px 20px;
+    padding-top: 12px;
+    font-size: clamp(0.6rem, 2.3vw, 0.8rem);
 }
 
 
@@ -265,6 +294,28 @@ img {
 #trainings {
     padding-top: 50px;
     padding-bottom: 5px;
+}
+
+#trainings p {
+    color: #cacfd0;
+    font-size: clamp(1.1rem, 2.5vw, 1,3rem);
+}
+
+#trainings span {
+    color: #f8f9fa;
+    font-size: clamp(1.1rem, 2.5vw, 1,3rem);
+    text-transform: uppercase;
+}
+
+#trainings .projects {
+    font-size: 0.9rem;
+    color: #3e3838;
+}
+
+#span-hover:hover {
+    color: #f8f9fa;
+    font-size: clamp(1.1rem, 2.5vw, 1,3rem);
+    text-transform: uppercase;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -513,13 +564,13 @@ p {
 }
 
 #corporateStyle {
-    color: rgb(41, 113, 237);
-    font-size: 20px;
+    color: #585555;
+    font-size: 18px;
 }
 
 .experiences h5 {
-    color: #585555;
-    font-size: 17px;
+    color: rgb(125, 127, 130);
+    font-size: 16px;
 }
 
 .experiences .badge-container {

@@ -14,7 +14,7 @@ export default function Presentation() {
           <h1>Bonjour,</h1>
           <h1 className='animate pulse'>Jessie Bagnéris</h1>
           <h2>De la bureautique à la <span>créativité</span>, j'ai codé ma nouvelle carrière en tant que :</h2>
-          <h3 className="animate flipInX">Développeuse Front-End React</h3>
+          <h3 className="animate flipInX">Développeuse Front-End</h3>
           <h2>Je recherche un poste/POEI/PMSMP.
             <br /><br />
             <span>Prête</span> à coder, <span>curieuse</span> et <span>motivée</span> parce que dans ce métier, on ne cesse jamais vraiment <span>d'apprendre</span> !

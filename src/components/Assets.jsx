@@ -20,15 +20,15 @@ export default function Assets() {
                 className="myBar"
                 label="Capacité d'adaptation"
               />
+                <ProgressBar
+                  now={progressOrgan}
+                  className="myBar"
+                  label="Travail d'équipe"
+                />
               <ProgressBar
                 now={progressTeam}
                 className="myBar"
                 label='Rigoureuse'
-              />
-              <ProgressBar
-                now={progressOrgan}
-                className="myBar"
-                label="Travail d'équipe"
               />
             </div>
           </div>

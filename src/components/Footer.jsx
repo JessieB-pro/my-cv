@@ -11,7 +11,7 @@ export default function Footer() {
 
             <div id="details" className="animate flash">
                 <p className='details'>
-                    <u>Pour me contacter</u> :
+                    <u>Me contacter</u> :
                 </p>
 
                 <div className='detailsEmail'>

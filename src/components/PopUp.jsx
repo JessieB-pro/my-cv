@@ -49,13 +49,13 @@ export default function PopUp() {
             id='pop-up'
             className="col-md-12 m-auto bg-white p-6"
           >
-            <p><u>Bienvenue dans ma bulle</u> !</p>
-            <p>Ceci n'est pas qu'une page très bleue mais mon cv que j'ai <span>codé avec React</span> en intégrant aussi une partie de mes <span>données stockées sur Cloud Firestore</span>,... 
+            <p className="bubble-title"><u>Bienvenue dans ma bulle</u> !</p>
+            <p>Ceci n'est <span className="blue-word">pas qu'une page bleue</span> mais mon <span>CV</span> que j'ai <span>codé avec React</span> en intégrant aussi une partie de mes <span>données</ span> stockées <span>sur Cloud Firestore</span>,... 
             </p>
             <p>J'ai ensuite <span>déployé</span> mon site sous mon <span>nom de domaine</span> via un <span>repo GitHub</span> et la plateforme <span>Cloudflare</span>.
             </p>
-            <p>Le tout avec une pincée d'humour et mes compétences en constante évolution !</p>
-            <small><u>Pour naviguer sur mon cv, cliquez en dehors de la bulle ou scrollez vers le bas !</u></small>
+            <p className="small-text">Le tout avec <span className="additional-text">mes compétences</span> en constante évolution et une <span className="additional-text">touche d'humour</span> !</p>
+            <p className="get-out-bubble"><u>Pour naviguer sur mon cv, cliquez en dehors de la bulle ou scrollez vers le bas !</u></p>
           </div>
         </div>
       )}

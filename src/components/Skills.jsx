@@ -43,15 +43,15 @@ export default function Skills() {
                   </li>
 
                   <li>
-                    <img src={techG2} alt="hand check" />
-                    Ça facilite bien :
-                    <span><b> Bootstrap v5.3.3,</b> jQuery</span>
+                    <img src={techG3} alt="bubble heart" />
+                    J'en suis fan :
+                    <span><b> REACT</b></span>
                   </li>
 
                   <li>
-                    <img src={techG3} alt="bubble heart" />
-                    J'en suis fan :
-                    <span><b> REACT v18.3.1 </b>et React Bootstrap/Router Dom/Redux</span>
+                    <img src={techG2} alt="hand check" />
+                    Ça facilite bien :
+                    <span><b> Bootstrap,</b> jQuery</span>
                   </li>
 
                   <li>
@@ -87,7 +87,7 @@ export default function Skills() {
                   <li>
                     <img src={techG8} alt="chemistry test" />
                     J'ai aussi testé :
-                    <span><b> WordPress, </b>PHP 7</span>
+                    <span><b> WordPress, </b>PHP</span>
                   </li>
                 </ul>
               </div>
