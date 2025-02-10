@@ -222,7 +222,7 @@ img {
 }
 
 #presentation .my-name span {opacity:0;}
-.letter1 {animation:letters-name 1s ease 0000ms forwards;}
+.letter1 {animation:letters-name 3s ease 0000ms forwards;}
 .letter2 {animation:letters-name 3s ease 0250ms forwards;}
 .letter3 {animation:letters-name 3s ease 0500ms forwards;}
 .letter4 {animation:letters-name 3s ease 0750ms forwards;}
