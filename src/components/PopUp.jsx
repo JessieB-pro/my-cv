@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 export default function PopUp() {
   const [show, setShow] = useState(false);
   const popupRef = useRef(null);
-  const delay = 3;
+  const delay = 4;
   const expirationTime = 24 * 60 * 60 * 1000;
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function PopUp() {
           <div
             ref={popupRef}
             id='pop-up'
-            className="col-md-12 m-auto bg-white p-6"
+            className="heartbeat col-md-12 m-auto bg-white p-6"
           >
             <p className="bubble-title"><u>Bienvenue dans ma bulle</u> !</p>
             <p>Ceci n'est <span className="blue-word">pas qu'une page bleue</span> mais mon <span>CV</span> que j'ai <span>codé avec React</span> en intégrant aussi une partie de mes <span>données</ span> stockées <span>sur Cloud Firestore</span>,... 

@@ -12,7 +12,23 @@ export default function Presentation() {
         </div>
         <div className="heading">
           <h1>Bonjour,</h1>
-          <h1 className='animate pulse'>Jessie Bagnéris</h1>
+          <h1 className='my-name animate pulse'>
+            <span className="letter1">J</span>
+            <span className="letter2">e</span>
+            <span className="letter3">s</span>
+            <span className="letter4">s</span>
+            <span className="letter5">i</span>
+            <span className="letter6">e</span>
+            <span className="letter7"> </span>
+            <span className="letter8">B</span>
+            <span className="letter9">a</span>
+            <span className="letter10">g</span>
+            <span className="letter11">n</span>
+            <span className="letter12">é</span>
+            <span className="letter13">r</span>
+            <span className="letter14">i</span>
+            <span className="letter15">s</span>
+            </h1>
           <h2>De la bureautique à la <span>créativité</span>, j'ai codé ma nouvelle carrière en tant que :</h2>
           <h3 className="animate flipInX">Développeuse Front-End</h3>
           <h2>Je recherche un poste/POEI/PMSMP.

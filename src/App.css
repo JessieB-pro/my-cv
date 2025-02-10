@@ -14,7 +14,6 @@ img {
 .heading h1 {
     color: #0e7cd5;
     margin-top: 50px;
-    /* margin-bottom: 20px; */
     text-transform: uppercase;
 }
 
@@ -51,8 +50,8 @@ img {
     width: 100vw;
     margin: auto;
     background: linear-gradient(to bottom,
-    rgb(67, 192, 241),
-    rgb(41, 113, 237));
+            rgb(67, 192, 241),
+            rgb(41, 113, 237));
 }
 
 #pop-up {
@@ -63,12 +62,92 @@ img {
     z-index: 1100;
 }
 
+.heartbeat {
+    -webkit-animation: shadow-drop-2-center 7s cubic-bezier(0.250, 0.460, 0.450, 1) both infinite;
+    animation: shadow-drop-2-center 7s cubic-bezier(0.250, 0.460, 0.450, 1) both infinite;
+}
+
+@-webkit-keyframes heartbeat {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    25% {
+        -webkit-transform: translateZ(40px);
+        transform: translateZ(40px);
+        -webkit-box-shadow: 0 0 40px 0px rgba(243, 14, 14, 0.956);
+        box-shadow: 0 0 40px 0px rgba(243, 14, 14, 0.956);
+    }
+
+    50% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translateZ(40px);
+        transform: translateZ(40px);
+        -webkit-box-shadow: 0 0 40px 0px rgba(243, 14, 14, 0.956);
+        box-shadow: 0 0 40px 0px rgba(243, 14, 14, 0.956);
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes shadow-drop-2-center {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    25% {
+        -webkit-transform: translateZ(40px);
+        transform: translateZ(40px);
+        -webkit-box-shadow: 0 0 40px 0px rgba(243, 14, 14, 0.956);
+        box-shadow: 0 0 40px 0px rgba(243, 14, 14, 0.956);
+    }
+
+    50% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translateZ(40px);
+        transform: translateZ(40px);
+        -webkit-box-shadow: 0 0 40px 0px rgba(243, 14, 14, 0.956);
+        box-shadow: 0 0 40px 0px rgba(243, 14, 14, 0.956);
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
 #pop-up .bubble-title {
     color: rgb(9, 9, 9);
     margin: 6px 10px;
     padding-bottom: 1.1rem;
-    font-size: clamp(1.1rem, 2.5vw, 1,3rem);
+    font-size: clamp(1.1rem, 2.5vw, 1, 3rem);
     text-transform: uppercase;
+    animation-duration: 2.5s;
 }
 
 #pop-up p {
@@ -134,8 +213,34 @@ img {
     margin-top: 20px;
     color: #fff;
     text-transform: none;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     animation-delay: 0.5s;
+}
+
+#presentation .my-name {
+    text-shadow: 2px 2px 2px rgb(38, 37, 37);
+}
+
+#presentation .my-name span {opacity:0;}
+.letter1 {animation:letters-name 1s ease 0000ms forwards;}
+.letter2 {animation:letters-name 3s ease 0250ms forwards;}
+.letter3 {animation:letters-name 3s ease 0500ms forwards;}
+.letter4 {animation:letters-name 3s ease 0750ms forwards;}
+.letter5 {animation:letters-name 3s ease 1000ms forwards;}
+.letter6 {animation:letters-name 3s ease 1250ms forwards;}
+.letter7 {animation:letters-name 3s ease 1500ms forwards;}
+.letter8 {animation:letters-name 3s ease 1500ms forwards;}
+.letter9 {animation:letters-name 3s ease 1750ms forwards;}
+.letter10 {animation:letters-name 3s ease 2000ms forwards;}
+.letter11 {animation:letters-name 3s ease 2250ms forwards;}
+.letter12 {animation:letters-name 3s ease 2500ms forwards;}
+.letter13 {animation:letters-name 3s ease 2750ms forwards;}
+.letter14 {animation:letters-name 3s ease 3000ms forwards;}
+.letter15 {animation:letters-name 3s ease 3250ms forwards;}
+
+@keyframes letters-name {
+	0% {opacity:0;}
+	100% {opacity:1.0;}
 }
 
 #presentation .heading h2 {
@@ -154,20 +259,11 @@ img {
 #presentation .heading h3 {
     margin-top: 15px;
     color: rgb(97, 216, 249);
-    text-shadow: 1px 1px 1px rgb(38, 37, 37);
+    text-shadow: 1px 2px 2px rgb(38, 37, 37);
     font-style: italic;
-    animation-duration: 2s;
-    animation-delay: 2.5s;
+    animation-duration: 3s;
+    animation-delay: 1s;
     text-transform: uppercase;
-}
-
-#presentation .heading #search {
-    margin-top: 15px;
-    color: rgb(154, 178, 241);
-    text-shadow: 1px 1px 1px rgb(38, 37, 37);
-    font-style: italic;
-    animation-duration: 2s;
-    animation-delay: 2.5s;
 }
 
 .button1 {
@@ -298,12 +394,12 @@ img {
 
 #trainings p {
     color: #cacfd0;
-    font-size: clamp(1.1rem, 2.5vw, 1,3rem);
+    font-size: clamp(1.1rem, 2.5vw, 1, 3rem);
 }
 
 #trainings span {
     color: #f8f9fa;
-    font-size: clamp(1.1rem, 2.5vw, 1,3rem);
+    font-size: clamp(1.1rem, 2.5vw, 1, 3rem);
     text-transform: uppercase;
 }
 
@@ -314,7 +410,7 @@ img {
 
 #span-hover:hover {
     color: #f8f9fa;
-    font-size: clamp(1.1rem, 2.5vw, 1,3rem);
+    font-size: clamp(1.1rem, 2.5vw, 1, 3rem);
     text-transform: uppercase;
 }
 
