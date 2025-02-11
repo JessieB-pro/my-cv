@@ -220,7 +220,7 @@ img {
     }
 
     50% {
-        color:#fff;
+        color:#f1ecec;
         text-shadow: 1px 1px 1px rgb(50, 48, 48);
     }   
 
@@ -238,7 +238,7 @@ img {
     border: 1px solid white;
     display: inline-block;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     padding: 14px 40px;
     border-radius: 3px;
     transition: all 0.3s ease-in 0s;
@@ -665,6 +665,17 @@ p {
 }
 
 #languages .myBar .progress-bar {
+    background: linear-gradient(to top,
+            rgb(31, 164, 216),
+            rgb(41, 113, 237));
+}
+
+#languages .myBarEnd {
+    width: 50vw;
+    margin: 25px auto 60px;
+}
+
+#languages .myBarEnd .progress-bar {
     background: linear-gradient(to top,
             rgb(31, 164, 216),
             rgb(41, 113, 237));
