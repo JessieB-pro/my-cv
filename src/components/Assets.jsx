@@ -1,39 +1,33 @@
-import { ProgressBar } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 
 export default function Assets() {
-
-  const progressAdapt = 95;
-  const progressTeam = 95;
-  const progressOrgan = 95;
+  const skills = ["Capacité d'adaptation", "Travail d'équipe", "Rigoureuse"];
 
   return (
-    <>
-      <div id="assets" className="container-fluid">
-        <div className="heading">
-          <h1>Atouts</h1>
-        </div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-8 col-sm-12 mt-5">
-              <ProgressBar
-                now={progressAdapt}
-                className="myBar"
-                label="Capacité d'adaptation"
-              />
-                <ProgressBar
-                  now={progressOrgan}
-                  className="myBar"
-                  label="Travail d'équipe"
-                />
-              <ProgressBar
-                now={progressTeam}
-                className="myBar"
-                label='Rigoureuse'
-              />
-            </div>
-          </div>
-        </div>
+    <div id="assets" className="container-fluid">
+      <div className="heading">
+        <h1>Atouts</h1>
       </div>
-    </>
-  )
+      <div className="ball-container">
+        {skills.map((skill, index) => (
+          <motion.div
+            key={index}
+            className="bouncing-ball"
+            initial={{ x: 0, y: 0 }}
+            animate={{
+              x: [0, `${Math.random() * 40}vw`, `${Math.random() * -40}vw`, 0],
+              y: [0, `${Math.random() * 40}vh`, `${Math.random() * -25}vh`, 0]
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 9 + index * 2,
+              ease: "easeInOut"
+            }}
+          >
+            <span>{skill}</span>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
 }
