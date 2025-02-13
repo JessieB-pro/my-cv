@@ -20,8 +20,10 @@ export default function Assets() {
             }}
             transition={{
               repeat: Infinity,
-              duration: 9 + index * 2,
-              ease: "easeInOut"
+              duration: 5, 
+              ease: "easeInOut",
+              repeatDelay: 2, 
+              delay: index * 5
             }}
           >
             <span>{skill}</span>
