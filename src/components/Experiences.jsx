@@ -1,4 +1,3 @@
-import Accordion from 'react-bootstrap/Accordion';
 import Badge from 'react-bootstrap/Badge';
 import Stack from 'react-bootstrap/Stack';
 import { MDBBadge } from "mdb-react-ui-kit";
@@ -10,12 +9,10 @@ export default function Experiences() {
         <div className="heading">
           <h1>Expériences</h1>
         </div>
-        <Accordion className='experiences'>
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>
+        <div className="container justify-content-center">
+          <ul>
+            <li>
               <h4>depuis 2010</h4>
-            </Accordion.Header>
-            <Accordion.Body>
               <h4 id="corporateStyle">UT3 Paul Sabatier</h4>
               <div className="d-flex justify-content-center flex-wrap mt-3 mb-3 badge-container">
                 <MDBBadge className="text-black mb-0 me-1 border" color="light">
@@ -51,13 +48,9 @@ export default function Experiences() {
                 </Stack>
               </div>
               <h5>Titulaire</h5>
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>
+            </li>
+            <li>
               <h4>2010 et avant</h4>
-            </Accordion.Header>
-            <Accordion.Body>
               <h4 id="corporateStyle">UT3 Paul Sabatier, Rectorat de Toulouse</h4>
               <div className="d-flex justify-content-center flex-wrap mt-3 mb-3 badge-container">
                 <MDBBadge className="text-black mb-0 me-1 border" color="light">
@@ -81,9 +74,9 @@ export default function Experiences() {
                 </Stack>
               </div>
               <h5>CDD</h5>
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   )

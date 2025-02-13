@@ -168,27 +168,78 @@ img {
     text-shadow: 2px 2px 2px rgb(38, 37, 37);
 }
 
-#presentation .my-name span {opacity:0;}
+#presentation .my-name span {
+    opacity: 0;
+}
 
-.letter1 {animation:letters-name 3s ease 0001ms forwards;}
-.letter2 {animation:letters-name 3s ease 0250ms forwards;}
-.letter3 {animation:letters-name 3s ease 0500ms forwards;}
-.letter4 {animation:letters-name 3s ease 0750ms forwards;}
-.letter5 {animation:letters-name 3s ease 1000ms forwards;}
-.letter6 {animation:letters-name 3s ease 1250ms forwards;}
-.letter7 {animation:letters-name 3s ease 1500ms forwards;}
-.letter8 {animation:letters-name 3s ease 1500ms forwards;}
-.letter9 {animation:letters-name 3s ease 1750ms forwards;}
-.letter10 {animation:letters-name 3s ease 2000ms forwards;}
-.letter11 {animation:letters-name 3s ease 2250ms forwards;}
-.letter12 {animation:letters-name 3s ease 2500ms forwards;}
-.letter13 {animation:letters-name 3s ease 2750ms forwards;}
-.letter14 {animation:letters-name 3s ease 3000ms forwards;}
-.letter15 {animation:letters-name 3s ease 3250ms forwards;}
+.letter1 {
+    animation: letters-name 3s ease 0001ms forwards;
+}
+
+.letter2 {
+    animation: letters-name 3s ease 0250ms forwards;
+}
+
+.letter3 {
+    animation: letters-name 3s ease 0500ms forwards;
+}
+
+.letter4 {
+    animation: letters-name 3s ease 0750ms forwards;
+}
+
+.letter5 {
+    animation: letters-name 3s ease 1000ms forwards;
+}
+
+.letter6 {
+    animation: letters-name 3s ease 1250ms forwards;
+}
+
+.letter7 {
+    animation: letters-name 3s ease 1500ms forwards;
+}
+
+.letter8 {
+    animation: letters-name 3s ease 1500ms forwards;
+}
+
+.letter9 {
+    animation: letters-name 3s ease 1750ms forwards;
+}
+
+.letter10 {
+    animation: letters-name 3s ease 2000ms forwards;
+}
+
+.letter11 {
+    animation: letters-name 3s ease 2250ms forwards;
+}
+
+.letter12 {
+    animation: letters-name 3s ease 2500ms forwards;
+}
+
+.letter13 {
+    animation: letters-name 3s ease 2750ms forwards;
+}
+
+.letter14 {
+    animation: letters-name 3s ease 3000ms forwards;
+}
+
+.letter15 {
+    animation: letters-name 3s ease 3250ms forwards;
+}
 
 @keyframes letters-name {
-	0% {opacity:0;}
-	100% {opacity:1.0;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
 }
 
 #presentation .heading h2 {
@@ -215,17 +266,17 @@ img {
 
 @keyframes anim-white-words {
     0% {
-        color:#b2adad;
+        color: #b2adad;
         text-shadow: 1px 1px 1px rgb(227, 48, 48);
     }
 
     50% {
-        color:#f1ecec;
+        color: #f1ecec;
         text-shadow: 1px 1px 1px rgb(50, 48, 48);
-    }   
+    }
 
     100% {
-        color:#b2adad;
+        color: #b2adad;
         text-shadow: 1px 1px 1px rgb(227, 48, 48);
     }
 }
@@ -586,46 +637,66 @@ p {
     padding-bottom: 5px;
 }
 
-.experiences {
-    width: 70vw;
-    margin: 0 auto;
-    text-align: center;
-    padding: 10px;
-    background: rgb(67, 192, 241);
+#experiences .container {
+    width: 80vw;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 60% auto;
+    height: auto;
+    align-self: center;
+    justify-content: center;
+}
+
+#experiences ul {
+    list-style-type: none;
+    perspective: 1000px;
+}
+
+#experiences ul li {
+    display: grid;
+    grid-template-columns: 60% 5;
     border-radius: 10px;
-    border: 2px solid #ccc;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    padding: 14px;
+    cursor: pointer;
+    transform: rotateY(-35deg) rotateX(15deg);
+    position: absolute;
+    border-bottom: 4px solid rgba(0, 0, 0, .2);
+    border-right: 4px solid rgba(0, 0, 0, .2);
+    transition: 0.7s;
 }
 
-.experiences .accordion-button:hover {
-    background-color: rgb(67, 192, 241);
+#experiences ul li:nth-child(1) {
+    /* margin: 30px -30px 60 -20px; */
     color: #fff;
+    background-color: #5d84e7;
+    background-image: linear-gradient(135deg, #7bdae8, #5d84e7);
+    z-index: 2;
 }
 
-.experiences .accordion-button:not(.collapsed) {
-    background: linear-gradient(to top,
-            rgb(67, 192, 241),
-            rgb(41, 113, 237));
-    color: #fff;
-    box-shadow: none;
+#experiences ul li:nth-child(2) {
+    margin: 30px -30px 0 -20px;
+    background-color: #7bdae8;
+    background-image: linear-gradient(135deg, #5d84e7, #7bdae8);
+    z-index: 1;
+    color: white;
 }
 
-.experiences button:focus {
-    box-shadow: none;
+#experiences ul li:hover {
+    transform: translateY(30px) rotateY(0deg) rotateX(15deg) scale(1.1);
+    z-index: 3;
 }
 
 #corporateStyle {
-    color: #585555;
+    color: rgb(72, 73, 75);
     font-size: 18px;
 }
 
-.experiences h5 {
-    color: rgb(125, 127, 130);
+#experiences h5 {
+    color: #555353;
     font-size: 16px;
 }
 
-.experiences .badge-container {
+#experiences .badge-container {
     gap: 10px;
 }
 
