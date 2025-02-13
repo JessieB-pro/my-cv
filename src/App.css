@@ -68,8 +68,8 @@ img {
 }
 
 .heartbeat {
-    -webkit-animation: shadow-drop-2-center 7s cubic-bezier(0.250, 0.460, 0.450, 1) both infinite;
-    animation: shadow-drop-2-center 7s cubic-bezier(0.250, 0.460, 0.450, 1) both infinite;
+    -webkit-animation: shadow-drop-2-center 5s cubic-bezier(0.250, 0.460, 0.450, 1) both infinite;
+    animation: shadow-drop-2-center 5s cubic-bezier(0.250, 0.460, 0.450, 1) both infinite;
 }
 
 @keyframes shadow-drop-2-center {
@@ -80,11 +80,17 @@ img {
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
 
-    100% {
+    50% {
         -webkit-transform: translateZ(40px);
         transform: translateZ(40px);
         -webkit-box-shadow: 0 0 40px 0px rgba(243, 14, 14, 0.956);
         box-shadow: 0 0 40px 0px rgba(243, 14, 14, 0.956);
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
 }
 
