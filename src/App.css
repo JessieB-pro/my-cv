@@ -695,7 +695,7 @@ p {
     z-index: 3;
     width: 50vw;
     margin-top: 0;
-    margin-left: -40px;
+    margin-left: -50px;
 }
 
 #corporateStyle {
@@ -719,7 +719,7 @@ p {
     #experiences ul li:hover {
         width: 65vw;
         margin-top: 0;
-        margin-left: -60px;
+        margin-left: -80px;
     }
 }
 
