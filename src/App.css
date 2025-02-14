@@ -716,6 +716,9 @@ p {
     #experiences ul li {
         width: 60vw;
     }
+    #experiences ul li:hover {
+        width: 60vw;
+    }
 }
 
 
