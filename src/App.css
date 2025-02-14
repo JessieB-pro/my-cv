@@ -717,7 +717,9 @@ p {
         width: 60vw;
     }
     #experiences ul li:hover {
-        width: 60vw;
+        width: 65vw;
+        margin-top: 0;
+        margin-left: -60px;
     }
 }
 
