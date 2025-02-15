@@ -416,23 +416,17 @@ img {
 #trainings p {
     color: #cacfd0;
     font-size: clamp(1.1rem, 2.5vw, 1, 3rem);
+    margin: 8px 0;
 }
 
-#trainings span {
+#trainings .highlight { 
     color: #f8f9fa;
     font-size: clamp(1.1rem, 2.5vw, 1, 3rem);
-    text-transform: uppercase;
 }
 
 #trainings .projects {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #3e3838;
-}
-
-#span-hover:hover {
-    color: #f8f9fa;
-    font-size: clamp(1.1rem, 2.5vw, 1, 3rem);
-    text-transform: uppercase;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -602,6 +596,17 @@ p {
             rgb(41, 113, 237));
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 2s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* --------------------------- */
 
@@ -719,7 +724,7 @@ p {
     #experiences ul li:hover {
         width: 65vw;
         margin-top: 0;
-        margin-left: -85px;
+        margin-left: -82px;
     }
 }
 
