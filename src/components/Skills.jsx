@@ -14,26 +14,26 @@ import techG91 from "../assets/techG91.png";
 
 export default function Skills() {
 
-  const [progress, setProgress] = useState({ frontEnd: 0, backEnd: 0 });
+  const [animatedData, setAnimatedData] = useState([
+    { name: "Front-End", value: 0, fill: "#2971ED" },
+    { name: "Back-End", value: 0, fill: "#43cfee" }
+  ]);
 
   useEffect(() => {
-    let valueFE = 0;
-    let valueBE = 0;
+    let progress = 0;
     const interval = setInterval(() => {
-      valueFE += 2;
-      valueBE += 1;
-      setProgress({ frontEnd: valueFE, backEnd: valueBE });
+      progress += 2;
+      setAnimatedData([
+        { name: "Front-End et CMS", value: Math.min(progress * 0.7, 70), fill: "#2971ED" },
+        { name: "Back-End", value: Math.min(progress * 0.3, 30), fill: "#43cfee" }
+      ]);
 
-      if (valueFE >= 70 && valueBE >= 30) clearInterval(interval);
-    }, 30);
+      if (progress >= 100) {
+        clearInterval(interval);
+      }
+    }, 30); 
   }, []);
-
-  const data = [
-    { name: "Front-End et CMS", value: 70, color: "#43cfee" },
-    { name: "Back-End", value: 30, color: "#2971ED" },
-  ];
-
-
+  
   const skills = [
     { img: techG1, text: "La base :", details: ["CSS", "HTML", "JavaScript"] },
     { img: techG2, text: "J'en suis fan :", details: ["REACT"] },
@@ -71,7 +71,7 @@ export default function Skills() {
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
                 <Pie
-                  data={data}
+                  data={animatedData}
                   dataKey="value"
                   nameKey="name"
                   cx="50%"
@@ -80,8 +80,8 @@ export default function Skills() {
                   fill="#8884d8"
                   label
                 >
-                  {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  {animatedData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.fill} />
                   ))}
                 </Pie>
                 <Legend />
@@ -96,7 +96,7 @@ export default function Skills() {
                   key={index}
                   initial={{ opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.5, delay: index * 0.9 }}
+                  transition={{ duration: 1.5, delay: index * 0.5 }}
                   className="animated-li"
                 >
                   {skill.link ? (

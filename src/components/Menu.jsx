@@ -1,25 +1,32 @@
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import NavItem from 'react-bootstrap/NavItem';
-import { NavLink } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
+import { NavLink } from 'react-router-dom';
+import { Container, Navbar, Nav, NavItem } from 'react-bootstrap';
+
+const menuItems = [
+  { path: '/presentation', label: 'Présentation' },
+  { path: '/skills', label: 'Compétences' },
+  { path: '/trainings', label: 'Formations' },
+  { path: '/assets', label: 'Atouts' },
+  { path: '/experiences', label: 'Expériences' },
+  { path: '/languages', label: 'Langues' },
+  { path: '/hobbies', label: "Centres d'intérêt" }
+];
 
 export default function Menu() {
 
   const [expanded, setExpanded] = useState(false);
-
-  let menuRef = useRef();
+  const menuRef = useRef();
 
   useEffect(() => {
     let handler = (e) => {
-      if(!menuRef.current.contains(e.target)){
-      setExpanded(false);
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setExpanded(false);
       }
     };
     document.addEventListener("mousedown", handler);
-  });
-  
+    return () => document.removeEventListener('mousedown', handler);
+  }, []);
+
   return (
     <div id='menu'>
       <Navbar ref={menuRef} expanded={expanded} collapseOnSelect expand="lg" bg="dark" data-bs-theme="dark" fixed='top'>
@@ -27,28 +34,13 @@ export default function Menu() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(!expanded)} />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto" as="ul">
-              <NavItem as="li">
-                <NavLink className="custom-navbar" to="/presentation" onClick={() => setExpanded(false)}>Présentation</NavLink>
-              </NavItem>
-              <NavItem as="li">
-                <NavLink className="custom-navbar" to="/skills" onClick={() => setExpanded(false)}>Compétences</NavLink>
-              </NavItem>
-
-              <NavItem as="li">
-                <NavLink className="custom-navbar" to="/trainings" onClick={() => setExpanded(false)}>Formations</NavLink>
-              </NavItem>
-              <NavItem as="li">
-                <NavLink className="custom-navbar" to="/assets" onClick={() => setExpanded(false)}>Atouts</NavLink>
-              </NavItem>
-              <NavItem as="li">
-                <NavLink className="custom-navbar" to="/experiences" onClick={() => setExpanded(false)}>Expériences</NavLink>
-              </NavItem>
-              <NavItem as="li">
-                <NavLink className="custom-navbar" to="/languages" onClick={() => setExpanded(false)}>Langues</NavLink>
-              </NavItem>
-              <NavItem as="li">
-                <NavLink className="custom-navbar" to="/hobbies" onClick={() => setExpanded(false)}>Centres d'intérêt</NavLink>
-              </NavItem>
+              {menuItems.map(({ path, label }) => (
+                <NavItem as='li' key={path}>
+                  <NavLink className='custom-navbar' to={path} onClick={() => setExpanded(false)}>
+                    {label}
+                  </NavLink>
+                </NavItem>
+              ))}
             </Nav>
           </Navbar.Collapse>
         </Container>
