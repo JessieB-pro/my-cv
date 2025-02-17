@@ -86,6 +86,7 @@ img {
         -webkit-box-shadow: 0 0 40px 0px rgba(243, 14, 14, 0.956);
         box-shadow: 0 0 40px 0px rgba(243, 14, 14, 0.956);
     }
+
     100% {
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
@@ -315,6 +316,7 @@ img {
 #skills {
     padding-top: 50px;
     padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 #skills .headingPlus h4 {
@@ -323,84 +325,55 @@ img {
     margin-top: 40px;
 }
 
-#skills .techGroup {
+.pie-chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.chart-label {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#skills #techGroup {
     font-family: "Playpen Sans", sans-serif;
 }
 
-#skills .techGroup li {
-    list-style-type: none;
-    margin: 10px auto;
-}
-
-#skills .techGroup ul {
+#skills #techGroup ul {
     font-size: 12px;
     padding: 0;
 }
 
-#skills .techGroup ul span {
-    font-size: 15px;
+#skills #techGroup li {
+    list-style-type: none;
+    margin: 20px auto;
 }
 
-#skills .techGroup img {
+#skills #techGroup img {
     width: 20px;
     opacity: 0.5;
     margin-right: 3px;
 }
 
-#skills .progress {
-    height: 30px;
-    margin: 30px 30px;
-    background: #cecdd0c3;
+#skills #techGroup ul span {
+    font-size: 15px;
+}
+
+#skills a {
+    color: #5da2db;
+    border: solid 1px #5da2db;
+    margin-top: 10px;
+}
+
+#skills a:hover {
+    color: #fcfcfc !important;
+    background-color: #5da2db;
     text-shadow: 2px 2px 2px #000;
-    font-size: 0.8em;
-    text-transform: uppercase;
-    min-width: 10%;
-    max-width: 70%;
-    white-space: nowrap;
-}
-
-#skills .myBarEnd {
-    width: 60vw;
-    margin: 25px auto;
-}
-
-#skills .myBar {
-    width: 50vw;
-    margin: 25px auto;
-}
-
-#skills .myBarMotiv {
-    width: 50vw;
-    margin: 25px auto;
-    margin-bottom: 40px;
-}
-
-#skills .myBarEnd .progress-bar {
-    background: linear-gradient(to top,
-            rgb(67, 192, 241),
-            rgb(41, 113, 237));
-}
-
-#skills .myBar .progress-bar {
-    background: linear-gradient(to top,
-            rgb(31, 164, 216),
-            rgb(41, 113, 237));
-}
-
-#skills .myBarMotiv .progress-bar {
-    background: linear-gradient(to top,
-            #43cfee,
-            rgb(70, 182, 243));
-}
-
-#skills .animate {
-    filter: drop-shadow(2px 2px 2px #38383e);
-}
-
-#skills .animate:hover {
-    animation-duration: 2s;
-    animation-delay: 1.5s;
-    animation-iteration-count: infinite;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -419,7 +392,7 @@ img {
     margin: 8px 0;
 }
 
-#trainings .highlight { 
+#trainings .highlight {
     color: #f8f9fa;
     font-size: clamp(1.1rem, 2.5vw, 1, 3rem);
 }
@@ -721,6 +694,7 @@ p {
     #experiences ul li {
         width: 60vw;
     }
+
     #experiences ul li:hover {
         width: 65vw;
         margin-top: 0;

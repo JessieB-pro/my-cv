@@ -1,100 +1,131 @@
-import { ProgressBar } from 'react-bootstrap';
-import techG1 from '../assets/techG1.png';
-import techG2 from '../assets/techG2.png';
-import techG3 from '../assets/techG3.png';
-import techG4 from '../assets/techG4.png';
-import techG4bis from '../assets/techG4bis.png';
-import techG5 from '../assets/techG5.png';
-import techG6 from '../assets/techG6.png';
-import techG7 from '../assets/techG7.png';
-import techG8 from '../assets/techG8.png';
+import { useState, useEffect } from "react";
+import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from "recharts";
+import { motion } from "framer-motion";
+import techG1 from "../assets/techG1.png";
+import techG2 from "../assets/techG2.png";
+import techG3 from "../assets/techG3.png";
+import techG4 from "../assets/techG4.png";
+import techG5 from "../assets/techG5.png";
+import techG6 from "../assets/techG6.png";
+import techG7 from "../assets/techG7.png";
+import techG8 from "../assets/techG8.png";
+import techG9 from "../assets/techG9.png";
+import techG91 from "../assets/techG91.png";
 
 export default function Skills() {
 
-  const progressFrontEnd = 70;
-  const progressBackEnd = 30;
+  const [progress, setProgress] = useState({ frontEnd: 0, backEnd: 0 });
+
+  useEffect(() => {
+    let valueFE = 0;
+    let valueBE = 0;
+    const interval = setInterval(() => {
+      valueFE += 2;
+      valueBE += 1;
+      setProgress({ frontEnd: valueFE, backEnd: valueBE });
+
+      if (valueFE >= 70 && valueBE >= 30) clearInterval(interval);
+    }, 30);
+  }, []);
+
+  const data = [
+    { name: "Front-End et CMS", value: 70, color: "#43cfee" },
+    { name: "Back-End", value: 30, color: "#2971ED" },
+  ];
+
+
+  const skills = [
+    { img: techG1, text: "La base :", details: ["CSS", "HTML", "JavaScript"] },
+    { img: techG2, text: "J'en suis fan :", details: ["REACT"] },
+    { img: techG3, text: "Ça facilite bien :", details: ["Bootstrap", "jQuery"] },
+    { img: techG4, text: "C'est aussi pratique :", details: ["Npm", "Node.js", "Vite"] },
+    { img: techG5, text: "Dans les nuages :", details: ["Cloudflare", "Firebase"] },
+    { img: techG6, text: "Mieux qu'Excel :", details: ["MySQL"] },
+    { img: techG7, text: "Ma mémoire :", details: ["Git"] },
+    { img: techG8, text: "Mieux que Notepad !", details: ["VSCode", "Brackets"] },
+    { img: techG9, text: "J'ai aussi testé :", details: ["WordPress", "PHP"] },
+    {
+      img: techG91,
+      text: "+ de détails :",
+      details: ["Cliquez ici !"],
+      link: "/trainings",
+    },
+    {
+      img: techG91,
+      text: "Vous ne trouvez pas votre bonheur... :",
+      details: ["Contactez-moi. Je m'adapte rapidement et me formerai rigoureusement à ce que vous recherchez !"],
+      link: "/presentation",
+    },
+  ];
+
+  const boldKeywords = ["CSS", "REACT", "Bootstrap", "Npm", "Cloudflare", "MySQL", "Git", "VSCode", "WordPress", "Cliquez ici !"];
 
   return (
-    <>
-      <div id="skills" className="container-fluid">
-        <div className="heading">
-          <h1>Compétences</h1>
-        </div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-8 col-sm-12">
-              <ProgressBar
-                now={progressFrontEnd}
-                className="myBarEnd"
-                label='Front End'
-              />
-              <ProgressBar
-                now={progressBackEnd}
-                className="myBarEnd"
-                label='Back End'
-              />
+    <div id="skills" className="container-fluid">
+      <div className="heading">
+        <h1>Compétences</h1>
+      </div>
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="pie-chart-container">
+            <ResponsiveContainer width="100%" height={250}>
+              <PieChart>
+                <Pie
+                  data={data}
+                  dataKey="value"
+                  nameKey="name"
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  fill="#8884d8"
+                  label
+                >
+                  {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Pie>
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
 
-              <div className="techGroup">
-                <ul>
-                  <li>
-                    <img src={techG1} alt="list check" />
-                    La base :
-                    <span><b> CSS,</b> HTML, JavaScript</span>
-                  </li>
-
-                  <li>
-                    <img src={techG3} alt="bubble heart" />
-                    J'en suis fan :
-                    <span><b> REACT</b></span>
-                  </li>
-
-                  <li>
-                    <img src={techG2} alt="hand check" />
-                    Ça facilite bien :
-                    <span><b> Bootstrap,</b> jQuery</span>
-                  </li>
-
-                  <li>
-                    <img src={techG4} alt="bulb" />
-                    C'est aussi pratique :
-                    <span><b> Npm, </b>Node.js, Vite</span>
-                  </li>
-
-                  <li>
-                    <img src={techG4bis} alt="sheet excel" />
-                    Dans les nuages :
-                    <span><b> Cloudflare, </b>Firebase</span>
-                  </li>
-
-                  <li>
-                    <img src={techG5} alt="sheet excel" />
-                    Mieux qu'Excel :
-                    <span><b> MySQL</b></span>
-                  </li>
-
-                  <li>
-                    <img src={techG6} alt="floppy disk" />
-                    Ma mémoire :
-                    <span><b> Git</b></span>
-                  </li>
-
-                  <li>
-                    <img src={techG7} alt="notepad" />
-                    Mieux que Notepad !
-                    <span><b> VSCode, </b>Brackets</span>
-                  </li>
-
-                  <li>
-                    <img src={techG8} alt="chemistry test" />
-                    J'ai aussi testé :
-                    <span><b> WordPress, </b>PHP</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div id="techGroup">
+            <ul>
+              {skills.map((skill, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.5, delay: index * 0.9 }}
+                  className="animated-li"
+                >
+                  {skill.link ? (
+                    <a href={skill.link} target="_blank" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none", padding: "10px 15px", borderRadius: "40px", color: "#5da2db", border: "solid 1px #5da2db", cursor: "pointer" }}>
+                      <img src={skill.img} alt={skill.alt} />
+                      {skill.text}{" "}
+                      {skill.details.map((word, i) => (
+                        <span key={i} style={{ marginLeft: "4px" }}>
+                          {i > 0 && ", "} {boldKeywords.includes(word) ? <b>{word}</b> : word}
+                        </span>
+                      ))}
+                    </a>
+                  ) : (
+                    <>
+                      <img src={skill.img} alt={skill.alt} />
+                      {skill.text}{" "}
+                      {skill.details.map((word, i) => (
+                        <span key={i}>
+                          {i > 0 && ", "} {boldKeywords.includes(word) ? <b>{word}</b> : word}
+                        </span>
+                      ))}
+                    </>
+                  )}
+                </motion.li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
-    </>
-  )
+    </div>
+  );
 }
