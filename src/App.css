@@ -184,59 +184,59 @@ img {
 }
 
 .letter2 {
-    animation: letters-name 3s ease 0250ms forwards;
+    animation: letters-name 3s ease 0200ms forwards;
 }
 
 .letter3 {
-    animation: letters-name 3s ease 0500ms forwards;
+    animation: letters-name 3s ease 0400ms forwards;
 }
 
 .letter4 {
-    animation: letters-name 3s ease 0750ms forwards;
+    animation: letters-name 3s ease 0600ms forwards;
 }
 
 .letter5 {
-    animation: letters-name 3s ease 1000ms forwards;
+    animation: letters-name 3s ease 0800ms forwards;
 }
 
 .letter6 {
-    animation: letters-name 3s ease 1250ms forwards;
+    animation: letters-name 3s ease 1000ms forwards;
 }
 
 .letter7 {
-    animation: letters-name 3s ease 1500ms forwards;
+    animation: letters-name 3s ease 1200ms forwards;
 }
 
 .letter8 {
-    animation: letters-name 3s ease 1500ms forwards;
+    animation: letters-name 3s ease 1400ms forwards;
 }
 
 .letter9 {
-    animation: letters-name 3s ease 1750ms forwards;
+    animation: letters-name 3s ease 1600ms forwards;
 }
 
 .letter10 {
-    animation: letters-name 3s ease 2000ms forwards;
+    animation: letters-name 3s ease 1800ms forwards;
 }
 
 .letter11 {
-    animation: letters-name 3s ease 2250ms forwards;
+    animation: letters-name 3s ease 2000ms forwards;
 }
 
 .letter12 {
-    animation: letters-name 3s ease 2500ms forwards;
+    animation: letters-name 3s ease 2200ms forwards;
 }
 
 .letter13 {
-    animation: letters-name 3s ease 2750ms forwards;
+    animation: letters-name 3s ease 2400ms forwards;
 }
 
 .letter14 {
-    animation: letters-name 3s ease 3000ms forwards;
+    animation: letters-name 3s ease 2600ms forwards;
 }
 
 .letter15 {
-    animation: letters-name 3s ease 3250ms forwards;
+    animation: letters-name 3s ease 2800ms forwards;
 }
 
 @keyframes letters-name {
@@ -779,6 +779,11 @@ p {
 #myCarousel .carousel-item h4 {
     color: #9d9a9f9e;
     font-size: 20px;
+}
+
+#myCarousel .carousel-item h5 {
+    color: #9d9a9f9e;
+    font-size: 17px;
 }
 
 .carousel-control-prev-icon,

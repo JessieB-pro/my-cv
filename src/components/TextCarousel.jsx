@@ -27,7 +27,8 @@ function TextCarousel() {
                     <Carousel.Item interval={8000}>
                         <div id="carousel-item" className="justify-content-center align-items-center" key={hobbies.id}>
                             <h3 className='mb-5'>{hobbies.title}</h3>
-                            <h4 className='mb-5'>{hobbies.quote}</h4>
+                            <h4 className='mb-3'>{hobbies.quote}</h4>
+                            <h5 className='mb-5'>{hobbies.author}</h5>
                         </div>
                     </Carousel.Item>
                 ))

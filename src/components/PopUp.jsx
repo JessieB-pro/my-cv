@@ -4,7 +4,7 @@ export default function PopUp() {
   const [show, setShow] = useState(false);
   const [animationClass, setAnimationClass] = useState("jackInTheBox");
   const popupRef = useRef(null);
-  const delay = 5;
+  const delay = 3.5;
   const expirationTime = 24 * 60 * 60 * 1000;
 
   useEffect(() => {
@@ -56,11 +56,11 @@ export default function PopUp() {
             className={`col-md-12 m-auto bg-white p-6 animate ${animationClass}`}
           >
             <p className="bubble-title"><u>Bienvenue dans ma bulle</u> !</p>
-            <p>Ceci n'est <span className="blue-word">pas qu'une page bleue</span> mais mon <span>CV</span> que j'ai <span>codé avec React</span> en intégrant aussi une partie de mes <span>données</ span> stockées <span>sur Cloud Firestore</span>,... 
+            <p>Ceci n'est <span className="blue-word">pas qu'une page bleue</span> mais mon <span>CV</span> que j'ai <span>codé avec React</span> en intégrant aussi une partie de mes <span>données</ span> stockées <span>sur Cloud Firestore.</span>
             </p>
-            <p>J'ai ensuite <span>déployé</span> mon site sous mon <span>nom de domaine</span> via un <span>repo GitHub</span> et la plateforme <span>Cloudflare</span>.
+            <p>J'ai ensuite <span>déployé</span> mon site sous mon <span>nom de domaine</span> via un <span>repo GitHub</span> et la plateforme <span>Cloudflare.</span>
             </p>
-            <p className="small-text">Le tout avec <span className="additional-text">mes compétences</span> en constante évolution et une <span className="additional-text">touche d'humour</span> !</p>
+            <p className="small-text">Je suis à la recherche d'<span className="additional-text">opportunités,</span> <span className="additional-text">merci</span> pour votre intérêt !</p>
             <p className="get-out-bubble"><u>Pour naviguer sur mon cv, cliquez en dehors de la bulle ou scrollez vers le bas !</u></p>
           </div>
         </div>

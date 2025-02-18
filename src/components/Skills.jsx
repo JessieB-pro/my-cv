@@ -11,6 +11,7 @@ import techG7 from "../assets/techG7.png";
 import techG8 from "../assets/techG8.png";
 import techG9 from "../assets/techG9.png";
 import techG91 from "../assets/techG91.png";
+import techG92 from "../assets/techG92.png";
 
 export default function Skills() {
 
@@ -42,6 +43,9 @@ export default function Skills() {
     { img: techG5, text: "Dans les nuages :", details: ["Cloudflare", "Firebase"] },
     { img: techG6, text: "Mieux qu'Excel :", details: ["MySQL"] },
     { img: techG7, text: "Ma mémoire :", details: ["Git"] },
+    
+    { img: techG92, text: "On est en 2025 !", details: ["ChatGPT", "Gemini", "DeepSeek"] },
+
     { img: techG8, text: "Mieux que Notepad !", details: ["VSCode", "Brackets"] },
     { img: techG9, text: "J'ai aussi testé :", details: ["WordPress", "PHP"] },
     {
@@ -52,13 +56,13 @@ export default function Skills() {
     },
     {
       img: techG91,
-      text: "Vous ne trouvez pas votre bonheur... :",
-      details: ["Contactez-moi. Je m'adapte rapidement et me formerai rigoureusement à ce que vous recherchez !"],
+      text: "Il manque une compétence ?",
+      details: ["Contactez-moi. Je suis un peu comme une API : prête à évoluer et à intégrer de nouvelles compétences !"],
       link: "/presentation",
     },
   ];
 
-  const boldKeywords = ["CSS", "REACT", "Bootstrap", "Npm", "Cloudflare", "MySQL", "Git", "VSCode", "WordPress", "Cliquez ici !"];
+  const boldKeywords = ["CSS", "REACT", "Bootstrap", "Npm", "Cloudflare", "MySQL", "Git", "ChatGPT", "VSCode", "WordPress", "Cliquez ici !"];
 
   return (
     <div id="skills" className="container-fluid">
