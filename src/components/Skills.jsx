@@ -24,8 +24,8 @@ export default function Skills() {
     const interval = setInterval(() => {
       progress += 2;
       setAnimatedData([
-        { name: "Front-End et CMS", value: Math.min(progress * 0.7, 70), fill: "#2971ED" },
-        { name: "Back-End", value: Math.min(progress * 0.3, 30), fill: "#43cfee" }
+        { name: "Front-End et CMS", value: Math.min(progress * 0.80, 80), fill: "#2971ED" },
+        { name: "Back-End", value: Math.min(progress * 0.20, 20), fill: "#43cfee" }
       ]);
 
       if (progress >= 100) {
@@ -78,7 +78,6 @@ export default function Skills() {
                   cy="50%"
                   outerRadius={80}
                   fill="#8884d8"
-                  label
                 >
                   {animatedData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.fill} />
