@@ -426,6 +426,10 @@ img {
     width: 50%;
 }
 
+.organization {
+    font-size: 1.2em;
+}
+
 .py-5 h4,
 h5,
 p {

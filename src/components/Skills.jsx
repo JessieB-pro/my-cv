@@ -36,18 +36,18 @@ export default function Skills() {
   }, []);
   
   const skills = [
-    { img: techG1, text: "La base :", details: ["CSS", "HTML", "JavaScript"] },
+    { img: techG1, text: "La base :", details: ["CSS", "HTML", "JS"] },
     { img: techG2, text: "J'en suis fan :", details: ["REACT"] },
-    { img: techG3, text: "Ça facilite bien :", details: ["Bootstrap", "jQuery"] },
+    { img: techG3, text: "Ça facilite bien :", details: ["Bootstrap", "TS", "jQuery"] },
     { img: techG4, text: "C'est aussi pratique :", details: ["Npm", "Node.js", "Vite"] },
     { img: techG5, text: "Dans les nuages :", details: ["Cloudflare", "Firebase"] },
-    { img: techG6, text: "Mieux qu'Excel :", details: ["MySQL"] },
+    { img: techG6, text: "Mieux qu'Excel :", details: ["Cloud Firestore", "MySQL"] },
     { img: techG7, text: "Ma mémoire :", details: ["Git"] },
     
-    { img: techG92, text: "On est en 2025 !", details: ["ChatGPT", "Gemini", "DeepSeek"] },
+    { img: techG92, text: "On est en 2025 !", details: ["ChatGPT", "Gemini"] },
 
     { img: techG8, text: "Mieux que Notepad !", details: ["VSCode", "Brackets"] },
-    { img: techG9, text: "J'ai aussi testé :", details: ["WordPress", "PHP"] },
+    { img: techG9, text: "J'ai aussi testé :", details: ["Python", "WordPress", "PHP"] },
     {
       img: techG91,
       text: "+ de détails :",
@@ -62,7 +62,7 @@ export default function Skills() {
     },
   ];
 
-  const boldKeywords = ["CSS", "REACT", "Bootstrap", "Npm", "Cloudflare", "MySQL", "Git", "ChatGPT", "VSCode", "WordPress", "Cliquez ici !"];
+  const boldKeywords = ["CSS", "REACT", "Bootstrap", "Npm", "Cloudflare", "Cloud Firestore", "Git", "ChatGPT", "VSCode", "Python", "Cliquez ici !"];
 
   return (
     <div id="skills" className="container-fluid">

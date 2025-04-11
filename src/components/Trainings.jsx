@@ -37,6 +37,51 @@ export default function Trainings() {
 
   const trainings = [
     {
+      colorClass: "gradient-custom-4",
+      organization: "OPENCLASSROOMS",
+      title: "Apprenez les bases du langage Python",
+      duration: "2025 (2 semaines)",
+      certificates: [
+        "formation gratuite",
+      ],
+      details: [
+        "Bases, Quiz, Exercices,...",
+      ],
+      badges: [
+        "VSCode",
+      ]
+    },
+    {
+      colorClass: "gradient-custom",
+      organization: "OPENCLASSROOMS",
+      title: "Apprenez à utiliser la ligne de commande dans un terminal",
+      duration: "2025 (3 jours)",
+      certificates: [
+        "formation gratuite",
+      ],
+      details: [
+        "Bases, Quiz, Exercices,...",
+      ],
+      badges: [
+        "Ubuntu",
+      ]
+    },
+    {
+      colorClass: "gradient-custom-4",
+      organization: "OPENCLASSROOMS",
+      title: "Découvrez TypeScript",
+      duration: "2025 (1 semaine)",
+      certificates: [
+        "formation gratuite",
+      ],
+      details: [
+        "Bases, Quiz, Exercices,...",
+      ],
+      badges: [
+        "VSCode",
+      ]
+    },
+    {
       colorClass: "gradient-custom",
       organization: "UDEMY",
       title: "React Js pour tous",
@@ -53,7 +98,7 @@ export default function Trainings() {
         "Firebase, Cloud Firestore, React-Redux",
       ],
       projects: [
-        "2 applications",
+        "2 applications, mon cv déployé",
       ],
       badges: [
         "VSCode",
@@ -213,7 +258,7 @@ export default function Trainings() {
                   ref={(el) => (cardsRef.current[index] = el)}
                 >
                   <MDBCardBody className="p-4">
-                    <h4>{training.organization}</h4>
+                    <h4 className="organization">{training.organization}</h4>
                     <h4 className="text-decoration-underline">{training.title}</h4>
                     <p className="medium text-white-50 mb-2">{training.duration}</p>
 
