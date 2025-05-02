@@ -14,7 +14,7 @@ export default function Footer() {
 
                 <a href="https://www.linkedin.com/in/jessie-bagneris-29b422330/" target='_blank'>
                     <img src={linkedin} alt="icon linkedin" />
-                    jessie-bagneris-29b422330
+                    jessie-bagneris-pro
                 </a>
 
             </div>
