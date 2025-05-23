@@ -12,21 +12,21 @@ const experiences = [
     company: "Viveris",
     roles: ["Immersion professionnelle PMSMP"],
     skills: ["Git", "Process", "React", "Python"],
-    description: "Dans le cadre de ma transition professionnelle, j’ai effectué une semaine d’immersion au sein de Viveris où j’ai pu voir les différents métiers de l’informatique et leurs process en entreprise.",
+    description: ["Dans le cadre de ma transition professionnelle, j’ai effectué une semaine d’immersion au sein de Viveris où j’ai pu voir les différents métiers de l’informatique et leurs process en entreprise"],
   },
   {
     period: "Septembre 2023 - Janvier 2025",
     company: "Transition professionnelle",
     roles: ["Projet personnel"],
-    skills: ["IT - Divers langages, technos,..."],
-    description: "Autoformation continue avec mise en pratique via des projets, exercices,... Développement et déploiement de mon site internet.",
+    skills: ["IT - Divers langages, technos, etc"],
+    description: ["Autoformation continue avec mise en pratique via des projets, exercices, etc", "Développement et déploiement de mon site internet"],
   },
   {
     period: "Février 2008 - Septembre 2023",
     company: "Université de Toulouse, Rectorat de Toulouse",
     roles: ["Secrétariat", "Gestion financière"],
     skills: ["Pack Office", "Apogee", "Sifac", "Geslab", "PuTTY"],
-    description: "Administratif : gestion et suivi de dossiers,... Financier : dépenses, actions sociales,...",
+    description: ["Administratif : gestion et suivi de dossiers, etc", "Financier : dépenses, actions sociales, etc"],
   },
 ];
 
@@ -91,7 +91,9 @@ export default function Experiences() {
                       </MDBBadge>
                     ))}
                   </div>
-                  <p>{description}</p>
+                  {description.map((description, i) => (
+                  <p key={i}>{description}</p>
+                  ))}
                 </li>
               </ul>
             </motion.div>
