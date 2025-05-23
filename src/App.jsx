@@ -1,35 +1,40 @@
 import './App.css'
 import Menu from './components/Menu'
-import Presentation from './components/Presentation'
+import Homepage from './components/Homepage'
+import About from './components/About'
 import Skills from './components/Skills'
 import Assets from './components/Assets'
 import Languages from './components/Languages'
 import Trainings from './components/Trainings'
 import Experiences from './components/Experiences'
 import Hobbies from './components/Hobbies'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
-import { Routes, Route, Navigate } from 'react-router-dom'
-import ErrorPage from './components/ErrorPage'
-import ScrollToTop from './components/ScrollToTop';
+import ScrollSpy from './components/ScrollSpy'
+
+// import ErrorPage from './components/ErrorPage'
 
 function App() {
+
+  const sections = ['section-homepage', 'section-about', 'section-skills', 'section-trainings', 'section-assets', 'section-experiences', 'section-languages', 'section-hobbies']
+
   return (
     <>
       <Menu />
 
-      <ScrollToTop />
+      <main>
+        <section id="section-homepage"><Homepage /></section>
+        <section id="section-about"><About /></section>
+        <section id="section-skills"><Skills /></section>
+        <section id="section-trainings"><Trainings /></section>
+        <section id="section-experiences"><Experiences /></section>
+        <section id="section-assets"><Assets /></section>
+        <section id="section-languages"><Languages /></section>
+        <section id="section-hobbies"><Hobbies /></section>
+        <section id="section-contact"><Contact /></section>
+      </main>
 
-      <Routes>
-        <Route path='/' element={<Navigate to="/presentation" replace />} />
-        <Route path='/presentation' element={<Presentation />} />
-        <Route path='/skills' element={<Skills />} />
-        <Route path='/trainings' element={<Trainings />} />
-        <Route path='/assets' element={<Assets />} />
-        <Route path='/experiences' element={<Experiences />} />
-        <Route path='/languages' element={<Languages />} />
-        <Route path='/hobbies' element={<Hobbies />} />
-        <Route path='*' element={<ErrorPage />} />
-      </Routes>
+      <ScrollSpy sectionIds={sections} />
 
       <Footer />
     </>

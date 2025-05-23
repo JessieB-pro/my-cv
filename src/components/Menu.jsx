@@ -1,15 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
 import { Container, Navbar, Nav, NavItem } from 'react-bootstrap';
 
 const menuItems = [
-  { path: '/presentation', label: 'Présentation' },
-  { path: '/skills', label: 'Compétences' },
-  { path: '/trainings', label: 'Formations' },
-  { path: '/assets', label: 'Atouts' },
-  { path: '/experiences', label: 'Expériences' },
-  { path: '/languages', label: 'Langues' },
-  { path: '/hobbies', label: "Centres d'intérêt" }
+  { href: '#section-homepage', label: 'Accueil' },
+  { href: '#section-about', label: 'A propos' },
+  { href: '#section-skills', label: 'Compétences' },
+  { href: '#section-trainings', label: 'Formations' },
+  { href: '#section-experiences', label: 'Expériences' },
+  { href: '#section-assets', label: 'Atouts' },
+  { href: '#section-languages', label: 'Langues' },
+  { href: '#section-hobbies', label: "Centres d'intérêt" },
+  { href: '#section-contact', label: "Contact" }
 ];
 
 export default function Menu() {
@@ -34,11 +35,14 @@ export default function Menu() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(!expanded)} />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto" as="ul">
-              {menuItems.map(({ path, label }) => (
-                <NavItem as='li' key={path}>
-                  <NavLink className='custom-navbar' to={path} onClick={() => setExpanded(false)}>
+              {menuItems.map(({ href, label }) => (
+                <NavItem as='li' key={href}>
+                  <a
+                    className='custom-navbar'
+                    href={href}
+                    onClick={() => setExpanded(false)}>
                     {label}
-                  </NavLink>
+                  </a>
                 </NavItem>
               ))}
             </Nav>

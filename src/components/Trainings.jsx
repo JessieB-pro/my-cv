@@ -29,7 +29,7 @@ export default function Trainings() {
 
   const highlightKeywords = (text) => {
     const keywords = [
-      "cycles de vie", "concepts", "hooks", "actions", "exercices", "projets", "site internet", "bureautique"
+      "hooks", "actions", "exercices", "projets", "HTML", "JavaScript", "PHP", "MySQL", "site internet", "bureautique"
     ];
     const regex = new RegExp(`\\b(${keywords.join("|")})\\b`, "gi");
     return text.replace(regex, (match) => `<span class='highlight'>${match.toUpperCase()}</span>`);
@@ -37,9 +37,9 @@ export default function Trainings() {
 
   const trainings = [
     {
-      colorClass: "gradient-custom-4",
-      organization: "OPENCLASSROOMS",
-      title: "Apprenez les bases du langage Python",
+      colorClass: "gradient-custom",
+      organization: "OpenClassrooms",
+      title: "Les bases du langage Python",
       duration: "2025 (2 semaines)",
       certificates: [
         "formation gratuite",
@@ -53,8 +53,8 @@ export default function Trainings() {
     },
     {
       colorClass: "gradient-custom",
-      organization: "OPENCLASSROOMS",
-      title: "Apprenez à utiliser la ligne de commande dans un terminal",
+      organization: "OpenClassrooms",
+      title: "Utiliser la ligne de commande dans un terminal",
       duration: "2025 (3 jours)",
       certificates: [
         "formation gratuite",
@@ -67,9 +67,9 @@ export default function Trainings() {
       ]
     },
     {
-      colorClass: "gradient-custom-4",
-      organization: "OPENCLASSROOMS",
-      title: "Découvrez TypeScript",
+      colorClass: "gradient-custom",
+      organization: "OpenClassrooms",
+      title: "Découvrir TypeScript",
       duration: "2025 (1 semaine)",
       certificates: [
         "formation gratuite",
@@ -83,19 +83,20 @@ export default function Trainings() {
     },
     {
       colorClass: "gradient-custom",
-      organization: "UDEMY",
+      organization: "Udemy",
       title: "React Js pour tous",
       duration: "2024 (5 mois)",
       certificates: [
-        "certificat UC-0b1fe9bf-853b-46f1-a81e-8220660dc6b0",
+        "certificat : UC-0b1fe9bf-853b-46f1-a81e-8220660dc6b0",
       ],
       details: [
         "CRA, VITE, Webpack, Babel,...",
-        "Composants, Cycles de vie, Props, States, Destructuring, Fragment,...",
-        "Bootstrap, React Bootstrap/Toastify,...",
-        "Concepts : PureComponent, Memo, Portails, Refs, HOC, React Router Dom,...",
+        "Cycles de vie, Props, States, Destructuring,...",
+        "React Bootstrap/Toastify,...",
+        "Concepts : React Router Dom, PureComponent, Memo, HOC,...",
         "Hooks : useState, useEffect,...",
         "Firebase, Cloud Firestore, React-Redux",
+        "3 Projets",
       ],
       projects: [
         "2 applications, mon cv déployé",
@@ -105,8 +106,8 @@ export default function Trainings() {
       ]
     },
     {
-      colorClass: "gradient-custom-4",
-      organization: "UDEMY",
+      colorClass: "gradient-custom",
+      organization: "Udemy",
       title: "Gagner en productivité avec Emmet",
       duration: "2024 (1 jour)",
       certificates: [
@@ -121,12 +122,12 @@ export default function Trainings() {
     },
     {
       colorClass: "gradient-custom",
-      organization: "UDEMY",
+      organization: "Udemy",
       title: "7 Formations CSS",
       duration: "2024 (3 mois)",
       certificates: [
         "5 formations gratuites et 2 avec certificat :",
-        "UC-6bea5886-3803-40ec-90cb-ce30fbbe4182", "UC-5c51c1ab-17f4-4ff6-80e9-efd10b048aa9",
+        "-> UC-6bea5886-3803-40ec-90cb-ce30fbbe4182", "-> UC-5c51c1ab-17f4-4ff6-80e9-efd10b048aa9",
       ],
       details: [
         "- 30 exercices en CSS",
@@ -142,12 +143,12 @@ export default function Trainings() {
       ]
     },
     {
-      colorClass: "gradient-custom-4",
-      organization: "UDEMY",
+      colorClass: "gradient-custom",
+      organization: "Udemy",
       title: "Formation Complète Développeur Web",
       duration: "2021 (6 mois)",
       certificates: [
-        "certificat UC-f3e094c1-4b5e-4cf7-bc0d-e8ab43664027",
+        "certificat : UC-f3e094c1-4b5e-4cf7-bc0d-e8ab43664027",
       ],
       details: [
         "HTML - CSS",
@@ -171,11 +172,11 @@ export default function Trainings() {
     },
     {
       colorClass: "gradient-custom",
-      organization: "UDEMY",
+      organization: "Udemy",
       title: "Créez votre site WordPress de A à Z – Débutants",
       duration: "2020 (1 mois)",
       certificates: [
-        "certificat UC-bf5c9c99-48e3-4aaf-8ac1-00120810d660",
+        "certificat : UC-bf5c9c99-48e3-4aaf-8ac1-00120810d660",
       ],
       details: [
         "Création de site internet",
@@ -188,7 +189,7 @@ export default function Trainings() {
       ]
     },
     {
-      colorClass: "gradient-custom-4",
+      colorClass: "gradient-custom",
       organization: "S.E.P.T. Blagnac",
       title: "Assistante Tertiaire",
       duration: "2008 (3 mois)",
@@ -235,13 +236,13 @@ export default function Trainings() {
               for (let i = 0; i < maxLength; i++) {
                 if (i < training.details.length) {
                   mixedContent.push(
-                    <p key={`d-${i}`} dangerouslySetInnerHTML={{ __html: highlightKeywords(training.details[i]) }}></p>
+                    <p className="fw-bold" key={`d-${i}`} dangerouslySetInnerHTML={{ __html: highlightKeywords(training.details[i]) }}></p>
                   );
                 }
                 if (i < training.projects.length) {
                   mixedContent.push(
                     <p key={`p-${i}`} className="projects">
-                      <u>Projets en local</u> : {training.projects[i]}
+                      <u>Projets</u> : {training.projects[i]}
                     </p>
                   );
                 }
@@ -257,13 +258,13 @@ export default function Trainings() {
                   className={`fade-in ${training.colorClass}`}
                   ref={(el) => (cardsRef.current[index] = el)}
                 >
-                  <MDBCardBody className="p-4">
-                    <h4 className="organization">{training.organization}</h4>
+                  <MDBCardBody className="p-3">
                     <h4 className="text-decoration-underline">{training.title}</h4>
-                    <p className="medium text-white-50 mb-2">{training.duration}</p>
+                    <h5 className="organization">{training.organization}</h5>
+                    <p className="medium mb-2">{training.duration}</p>
 
                     {training.certificates?.map((certificate, i) => (
-                      <p className="small text-white-50 mb-0" key={i}>{certificate}</p>
+                      <p className="small mb-0" key={i}>{certificate}</p>
                     ))}
 
                     {isSpecial ? (
@@ -271,18 +272,18 @@ export default function Trainings() {
                     ) : (
                       <>
                         {training.details?.map((detail, i) => (
-                          <p key={i} dangerouslySetInnerHTML={{ __html: highlightKeywords(detail) }}></p>
+                          <p className="fw-bold" key={i} dangerouslySetInnerHTML={{ __html: highlightKeywords(detail) }}></p>
                         ))}
                         {training.projects?.map((project, i) => (
                           <p key={i} className="projects">
-                            <u>Projets en local</u> : {project}
+                            <u>Projets</u> : {project}
                           </p>
                         ))}
                       </>
                     )}
 
                     {training.badges?.map((badge, i) => (
-                      <MDBBadge className="text-black mb-0 me-1" color="light" key={i}>
+                      <MDBBadge className="specific-color text-white mb-0 me-1" key={i}>
                         {badge}
                       </MDBBadge>
                     ))}

@@ -21,14 +21,14 @@ function TextCarousel() {
     }, []);
 
     return (
-        <Carousel id="myCarousel">
+        <Carousel id="myCarouselHobbies">
             {hobbies ? (
                 hobbies.map((hobbies, i) => (
-                    <Carousel.Item interval={8000}>
-                        <div id="carousel-item" className="justify-content-center align-items-center" key={hobbies.id}>
-                            <h3 className='mb-5'>{hobbies.title}</h3>
-                            <h4 className='mb-3'>{hobbies.quote}</h4>
-                            <h5 className='mb-5'>{hobbies.author}</h5>
+                    <Carousel.Item interval={3000}>
+                        <div id="carousel-item-hobbies" className="justify-content-center align-items-center" key={hobbies.id}>
+                            <h3>{hobbies.title}</h3>
+                            <h4>{hobbies.quote}</h4>
+                            <h5>{hobbies.author}</h5>
                         </div>
                     </Carousel.Item>
                 ))

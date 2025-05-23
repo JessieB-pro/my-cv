@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from "recharts";
-import { motion } from "framer-motion";
 import techG1 from "../assets/techG1.png";
 import techG2 from "../assets/techG2.png";
 import techG3 from "../assets/techG3.png";
@@ -16,8 +15,9 @@ import techG92 from "../assets/techG92.png";
 export default function Skills() {
 
   const [animatedData, setAnimatedData] = useState([
-    { name: "Front-End", value: 0, fill: "#2971ED" },
-    { name: "Back-End", value: 0, fill: "#43cfee" }
+    { name: "Front-End/CMS/Git", value: 0, fill: "#b325d7" },
+    { name: "Back-End", value: 0, fill: "#5b93f5" },
+    { name: "IDE/Hébergement/IA/...", value: 0, fill: "#20e791" }
   ]);
 
   useEffect(() => {
@@ -25,16 +25,16 @@ export default function Skills() {
     const interval = setInterval(() => {
       progress += 2;
       setAnimatedData([
-        { name: "Front-End et CMS", value: Math.min(progress * 0.80, 80), fill: "#2971ED" },
-        { name: "Back-End", value: Math.min(progress * 0.20, 20), fill: "#43cfee" }
+        { name: "Front-End/CMS/Git", value: Math.min(progress * 0.60, 60), fill: "#b325d7" },
+        { name: "Back-End", value: Math.min(progress * 0.20, 20), fill: "#5b93f5" },
+        { name: "IDE/Hébergement/IA/...", value: Math.min(progress * 0.20, 20), fill: "#20e791" }
       ]);
 
       if (progress >= 100) {
-        clearInterval(interval);
-      }
-    }, 30); 
+        clearInterval(interval);}
+    }, 30);
   }, []);
-  
+
   const skills = [
     { img: techG1, text: "La base :", details: ["CSS", "HTML", "JS"] },
     { img: techG2, text: "J'en suis fan :", details: ["REACT"] },
@@ -43,22 +43,20 @@ export default function Skills() {
     { img: techG5, text: "Dans les nuages :", details: ["Cloudflare", "Firebase"] },
     { img: techG6, text: "Mieux qu'Excel :", details: ["Cloud Firestore", "MySQL"] },
     { img: techG7, text: "Ma mémoire :", details: ["Git"] },
-    
     { img: techG92, text: "On est en 2025 !", details: ["ChatGPT", "Gemini"] },
-
     { img: techG8, text: "Mieux que Notepad !", details: ["VSCode", "Brackets"] },
     { img: techG9, text: "J'ai aussi testé :", details: ["Python", "WordPress", "PHP"] },
     {
       img: techG91,
       text: "+ de détails :",
       details: ["Cliquez ici !"],
-      link: "/trainings",
+      link: "#trainings",
     },
     {
       img: techG91,
       text: "Il manque une compétence ?",
       details: ["Contactez-moi. Je suis un peu comme une API : prête à évoluer et à intégrer de nouvelles compétences !"],
-      link: "/presentation",
+      link: "#contact",
     },
   ];
 
@@ -81,7 +79,6 @@ export default function Skills() {
                   cx="50%"
                   cy="50%"
                   outerRadius={80}
-                  fill="#8884d8"
                 >
                   {animatedData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.fill} />
@@ -95,15 +92,11 @@ export default function Skills() {
           <div id="techGroup">
             <ul>
               {skills.map((skill, index) => (
-                <motion.li
+                <li
                   key={index}
-                  initial={{ opacity: 0, y: 5 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.5, delay: index * 0.5 }}
-                  className="animated-li"
                 >
                   {skill.link ? (
-                    <a href={skill.link} target="_blank" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none", padding: "10px 15px", borderRadius: "40px", color: "#5da2db", border: "solid 1px #5da2db", cursor: "pointer" }}>
+                    <a href={skill.link} style={{ display: "inline-flex", alignItems: "center", textDecoration: "none", padding: "10px 15px", borderRadius: "50px", cursor: "pointer" }}>
                       <img src={skill.img} alt={skill.alt} />
                       {skill.text}{" "}
                       {skill.details.map((word, i) => (
@@ -123,7 +116,7 @@ export default function Skills() {
                       ))}
                     </>
                   )}
-                </motion.li>
+                </li>
               ))}
             </ul>
           </div>
