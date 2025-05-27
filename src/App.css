@@ -199,14 +199,6 @@ html {
     color: #E04151;
 }
 
-.button-about:focus,
-.button-about:active {
-    outline: none;
-    background-color: #b58edcbb;
-    box-shadow: 2px 2px 1px 2px rgba(155, 155, 160, 0.2);
-    color: #fff;
-}
-
 
 /* --------------------------- */
 
@@ -255,15 +247,6 @@ html {
     border: 1px solid #fff;
     box-shadow: 3px 3px 3px 3px rgba(160, 155, 155, 0.3);
     color: #5b93f5;
-}
-
-#skills a:focus,
-#skills a:active {
-    outline: none;
-    background-color: #fff;
-    border: 1px solid #b325d7;
-    box-shadow: 2px 2px 1px 2px rgba(155, 155, 160, 0.2);
-    color: #b325d7;
 }
 
 
@@ -720,21 +703,6 @@ html {
 
 .button-contact-meet:hover {
     color: #fff;
-}
-
-.button-contact-in:focus,
-.button-contact-meet:focus {
-  outline: none;
-  background-color: #b58edcbb;
-  box-shadow: 2px 2px 1px 2px rgba(155, 155, 160, 0.2);
-  color: #fff;
-}
-
-.button-contact-in:active,
-.button-contact-meet:active {
-  background-color: #b58edcbb;
-  box-shadow: 2px 2px 1px 2px rgba(155, 155, 160, 0.2);
-  color: #fff;
 }
 
 .button-contact-in h5 {

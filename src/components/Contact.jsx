@@ -13,10 +13,7 @@ export default function Contact() {
 
           <div className="d-flex flex-wrap justify-content-center align-items-center">
 
-            <a href="https://www.linkedin.com/in/jessie-bagneris-pro/" className="button-contact-in" target='_blank' onClick={(e) => {
-    // Ajout d'un délai pour permettre au navigateur d'ouvrir le lien avant de retirer le focus
-    setTimeout(() => e.currentTarget.blur(), 100);
-  }}>
+            <a href="https://www.linkedin.com/in/jessie-bagneris-pro/" className="button-contact-in" target='_blank'>
               <h5>Message</h5>
               <img src={linkedin} alt="icon linkedin" />
             </a>
