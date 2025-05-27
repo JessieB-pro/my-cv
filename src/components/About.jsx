@@ -52,10 +52,19 @@ export default function About() {
 
           <p>Contactez-moi, je me ferai un <strong>plaisir de vous répondre</strong>.</p>
 
-          <a href="#contact" className="button-about">
+          <a
+            href="#contact"
+            className="button-about"
+            onMouseUp={(e) => e.currentTarget.blur()}
+          >
             ME CONTACTER
           </a>
-          <a href={cv_Jessie_BAGNERIS} className="button-about mb-5" target="_blank">Télécharger mon CV</a>
+          <a
+            href={cv_Jessie_BAGNERIS}
+            className="button-about mb-5"
+            target="_blank"
+            onMouseUp={(e) => e.currentTarget.blur()}
+          >Télécharger mon CV</a>
         </div>
       </div>
     </>

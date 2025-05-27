@@ -13,20 +13,27 @@ export default function Contact() {
 
           <div className="d-flex flex-wrap justify-content-center align-items-center">
 
-          <a href="https://www.linkedin.com/in/jessie-bagneris-pro/" className="button-contact-in" target='_blank'>
-            <h5>Message</h5>
-            <img src={linkedin} alt="icon linkedin" />
-          </a>
+            <a
+              href="https://www.linkedin.com/in/jessie-bagneris-pro/"
+              className="button-contact-in"
+              target='_blank'
+              onMouseUp={(e) => e.currentTarget.blur()}>
+              <h5>Message</h5>
+              <img src={linkedin} alt="icon linkedin" />
+            </a>
 
-          <a href="#contact" className="button-contact-meet">
-            <h5>Rencontre</h5>
-            <p className='meet-style'>Disponible sur Toulouse et sa périphérie.</p>
-          </a>
+            <a
+              href="#contact"
+              className="button-contact-meet"
+              onMouseUp={(e) => e.currentTarget.blur()}>
+              <h5>Rencontre</h5>
+              <p className='meet-style'>Disponible sur Toulouse et sa périphérie.</p>
+            </a>
+
+          </div>
 
         </div>
-
-      </div>
-    </div >
+      </div >
     </>
   )
 }

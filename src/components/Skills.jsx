@@ -96,7 +96,11 @@ export default function Skills() {
                   key={index}
                 >
                   {skill.link ? (
-                    <a href={skill.link} style={{ display: "inline-flex", alignItems: "center", textDecoration: "none", padding: "10px 15px", borderRadius: "50px", cursor: "pointer" }}>
+                    <a
+                    href={skill.link}
+                    style={{ display: "inline-flex", alignItems: "center", textDecoration: "none", padding: "10px 15px", borderRadius: "50px", cursor: "pointer" }}
+                    onMouseUp={(e) => e.currentTarget.blur()}
+                    >
                       <img src={skill.img} alt={skill.alt} />
                       {skill.text}{" "}
                       {skill.details.map((word, i) => (
