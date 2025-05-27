@@ -723,13 +723,18 @@ html {
 }
 
 .button-contact-in:focus,
-.button-contact-meet:focus,
+.button-contact-meet:focus {
+  outline: none;
+  background-color: #b58edcbb;
+  box-shadow: 2px 2px 1px 2px rgba(155, 155, 160, 0.2);
+  color: #fff;
+}
+
 .button-contact-in:active,
 .button-contact-meet:active {
-    outline: none;
-    background-color: #b58edcbb;
-    box-shadow: 2px 2px 1px 2px rgba(155, 155, 160, 0.2);
-    color: #fff;
+  background-color: #b58edcbb;
+  box-shadow: 2px 2px 1px 2px rgba(155, 155, 160, 0.2);
+  color: #fff;
 }
 
 .button-contact-in h5 {
