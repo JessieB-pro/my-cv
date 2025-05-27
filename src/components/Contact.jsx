@@ -1,31 +1,6 @@
 import linkedin from '../assets/linkedin.png';
-import { useEffect } from 'react';
 
 export default function Contact() {
-
-
-useEffect(() => {
-    const links = document.querySelectorAll('a');
-
-    links.forEach(link => {
-      // Quand l'utilisateur clique sur un lien, on supprime le focus avec un délai court
-      link.addEventListener('click', handleBlurAfterClick);
-    });
-
-    function handleBlurAfterClick(e) {
-      setTimeout(() => {
-        e.currentTarget.blur();
-      }, 100); // délai pour laisser le lien s’ouvrir
-    }
-
-    // Nettoyage à la désactivation du composant
-    return () => {
-      links.forEach(link => {
-        link.removeEventListener('click', handleBlurAfterClick);
-      });
-    };
-  }, []);
-
   return (
     <>
       <div id="contact" className="container-fluid">
